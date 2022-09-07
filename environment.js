@@ -1,0 +1,1 @@
+const MONGO_URI = 'mongodb+srv://Wallysson:Valdemir0123456@cluster0.bmdvm.mongodb.net/dadosapi' | process.env.MONGO_URI

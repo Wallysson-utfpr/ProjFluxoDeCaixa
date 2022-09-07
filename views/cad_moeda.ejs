@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moedas</title>
+    
+    <!-- folha de estilo -->
+    <style>
+      table {
+        background-color: rgba(8, 8, 8, 0.904);
+        margin-left: 3%;
+      }
+
+      td,
+      th {
+        border: 1px solid black;
+        padding: 5px;
+        text-align: center;
+        color: white;
+        font-weight: bolder;
+      }
+
+      th {
+        font-size: 15pt;
+        font-weight: bolder;
+        text-align: center;
+      }
+
+      li {
+        list-style-type: none;
+      }
+
+      li a {
+        font-size: 15pt;
+        color: blue;
+        text-decoration: none;
+      }
+
+      form {
+        padding-left: 3%;
+      }
+
+      .core {
+        background-color: red;
+      }
+
+      .txtCor {
+        border-radius: 10%;
+        border-width: 3px;
+        border-color: black;
+      }
+
+      .logoutlink a {
+        font-size: 14pt;
+        color: black;
+        text-align: center
+         
+        
+      }
+
+      .logoutlink {
+        font-size: 14pt;
+        color: black;
+        text-align: center
+         
+        
+      }
+
+
+
+
+
+      body {
+        /* background-color: rgb(47, 112, 112); */
+        /* background-color: rgb(113, 177, 238); */
+        background: linear-gradient(-90deg, white, gray, lightblue);
+      }
+
+      .foto {
+        max-width: 150px;
+        max-height: 100px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    
+    <ul>
+      <br />
+        <li><a href="/consulta" class="btn btn-success">Listar Moedas</a></li>
+    </ul>
+    
+    <br />
+    
+    <br>
+    <!-- limpa o cookie de sessão e faz logout -->
+    <p class = "logoutlink">
+    <a href="/logout" >Clique aqui para Logout</a>
+    </p>
+
+    <!-- Este bloco seria para pesquisar uma moeda informando alguns dados.
+    <form method="post">
+      <input
+        type="text"
+        name="txtPesquisa"
+        class="txtCor"
+        placeholder="Moeda desejada..."
+      />
+      <input type="submit" value="Pesquisar" class="btn btn-dark" />
+    </form>
+    -->
+
+    <br />
+
+    <form method="POST" enctype="multipart/form-data"> <!-- action="add" -->
+      Moeda: <input type="text" name="txtNome" placeholder="Moeda..." class="txtCor" /> <br><br>
+      Alta: <input type="text" name="txtAlta" placeholder="Alta..." class="txtCor" /> <br> <br>
+      Baixa: <input type="text" name="txtBaixa" placeholder="Alta..." class="txtCor" /> <br> <br>
+      Foto: <input type="file" name="txtFoto" /> <br> <br>
+      <input type="submit" name="Adicionar" value="Adicionar" class="btn btn-primary" /> <br><br>
+    </form>
+
+    <!-- laço for para mostrar as imagens retornadas pelo vetor 'images'-->
+    <ul>
+      <% for(var i=0; i<images.length; i++) {%>
+        <li><%= images[i] %></li>
+        <li> <img src = "/fotos/<%=images[i]%>"/> </li> <% } %>
+    </ul>
+    
+  </body>
+
+</html>

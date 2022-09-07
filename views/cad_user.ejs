@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+    
+        <!-- folha de estilos -->
+        <style>
+            body {
+                /* background: linear-gradient(-90deg, blue, red, purple); */
+                background: linear-gradient(-90deg, white, gray, lightblue);
+            }
+
+            .login {
+                padding: 15px;
+                height: 70vh;
+                background: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .login-container {
+                max-height: 510px;
+                width: 300px;
+                background-color: rgb(206, 210, 220);
+                box-sizing: border-box;
+                padding: 32px;
+                border-radius: 8px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .login-form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .login-input {
+                height: 40px;
+                width: 100%;
+                box-sizing: border-box;
+                padding-left: 8px;
+                border: unset;
+                outline: none;
+            }
+
+            .login-input-border {
+                height: 1px;
+                width: 100%;
+                margin-bottom: 16px;
+                background-color: #cfcfcf;
+                transition: 0.3s, ease-in-out;
+            }
+
+            .login-input-border::after {
+                content: "";
+                display: block;
+                height: 1px;
+                width: 0;
+                margin-bottom: 16px;
+                background: linear-gradient(120deg, #0e0e0e, #ff1010);
+                transition: 0.3s, ease-in-out;
+            }
+
+            .login-input:focus+.login-input-border::after {
+                width: 100%;
+            }
+
+            .login-submit {
+                height: 48px;
+                width: 100%;
+                padding-left: 8px;
+                outline: none;
+                position: relative;
+                background: linear-gradient(120deg, #0c1dd5, #090909, #0c1dd5);
+                background-size: 200%;
+                margin-bottom: 32px;
+                color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+                border: unset;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: 0.5s, ease;
+            }
+
+            .login-submit:hover {
+                background-position: right;
+            }
+
+            .login-reset {
+                font-size: 13px;
+                color: #929292;
+                text-decoration: none;
+            }
+
+            .bt-cancelar {
+                font-family: sans-serif;
+                font-size: 10pt;
+                color: #929292;
+                padding: 5px;
+                text-decoration: none;
+                margin-top: 10%;
+                -webkit-transition: box-shadow 300ms ease-in-out,
+                    color 300ms ease-in-out;
+                transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+            }
+
+            .bt-cadastro {
+                font-family: sans-serif;
+                font-size: 10pt;
+                color: #929292;
+                padding: 5px;
+                text-decoration: none;
+                margin-top: 10%;
+                -webkit-transition: box-shadow 300ms ease-in-out,
+                    color 300ms ease-in-out;
+                transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+            }
+            
+        </style>
+
+    </head>
+
+    <body>
+        <div id="dv-modal" class="modal">
+            <div class="modal-content">
+                <main class="login">
+                    <div class="login-container">
+                        <h1 class="login-title">Cadastro</h1>
+                        <form method="POST" action="/cadastrar" class="login-form">
+                            <!-- incluído e-mail obrigatório para evitar erro do servidor de campo vazio -->
+                            <input class="login-input" type="email" required name="iptEmail" placeholder="Email" />
+                            <span class="login-input-border"></span>
+                            <ul2></ul2>
+                            
+                            <!-- incluído senha obrigatória para evitar erro do servidor de senha vazia -->
+                            <input class="login-input" type="password" required name="iptSenha" placeholder="Senha" />
+                            <span class="login-input-border"></span>
+                            
+                            <ul1></ul1>
+                            <p></p>
+                            
+                            <input type="submit" name="Cadastro" value="Cadastrar" class="btn-cadastro" />
+                            
+                            <p>
+                                <a href="/">Voltar</a>
+                            </p>
+
+                            <!-- scrip para orientar tamanho mínimo da senha -->
+                            <script>
+                                const inputPassword = document.querySelector('input[type = "password"]');
+                                const submitButton = document.querySelector('.btn-cadastro');
+                                
+                                document.querySelector(".btn-cadastro").disabled = true;
+                            
+                                inputPassword.addEventListener("keyup", function (){
+                                    var avisoSenha = document.querySelector("ul1"),
+                                    palavra = inputPassword.value;
+                                    avisoSenha.innerHTML = "";
+                                    if (palavra.length < 4) {
+                                        var li = document.createElement("li");
+                                        li.innerHTML = "Senha precisa ser maior do que três caracteres!";
+                                        avisoSenha.appendChild(li).style.color = "red";
+                                    
+                                    }
+                        
+                                    else{
+                                    var li = document.createElement("li");
+                                        li.innerHTML = "Senha OK";
+                                        avisoSenha.appendChild(li).style.color = "green";
+                                        document.querySelector(".btn-cadastro").disabled = false;
+                                        
+                                    }
+                                })
+                            </script> 
+                        </form> 
+                    </div>
+                </main>
+            </div>
+        </div>
+    </body>
+
+</html>
