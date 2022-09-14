@@ -36,7 +36,7 @@ app.get('/', function (req, res) {
 
     if (req.cookies.token) {
         res.redirect('/add');
-    }else{
+    } else {
         res.render('login.ejs')
     }
 })
@@ -44,7 +44,7 @@ app.get('/', function (req, res) {
 app.get('/logout', function (req, res) {
     res.clearCookie('token');
     res.render('login.ejs')
- })
+})
 
 
 app.get('/cadastrar', function (req, res) {
@@ -80,7 +80,7 @@ app.post('/cadastrar', async (req, res) => {
 
     try {
         const { iptEmail } = req.body;
-        const data = await Login.findOne({ email: iptEmail})
+        const data = await Login.findOne({ email: iptEmail })
 
         const newUser = {
             id: data._id,
@@ -95,7 +95,7 @@ app.post('/cadastrar', async (req, res) => {
                 email: req.body.iptEmail,
                 password: req.body.iptSenha
             })
-        
+
             login.save(function (err) {
                 if (err) {
                     console.log(err);
@@ -111,12 +111,12 @@ app.post('/cadastrar', async (req, res) => {
 // autenticação do usuário no servidor - comparando os dados informados
 app.post('/authenticate', async (req, res) => {
     const { iptEmail, iptSenha } = req.body;
-    const data = await Login.findOne({ email: iptEmail, password: iptSenha })    
+    const data = await Login.findOne({ email: iptEmail, password: iptSenha })
     if (data) {
         const token = jwt.sign({ id: data._id }, 'secret', { expiresIn: '1h' });
         res.cookie('token', token, { maxAge: 3600000, httpOnly: true });
         res.redirect('/add');
-    }else{
+    } else {
         res.redirect('/wrong_passw');
     }
 })
@@ -124,12 +124,13 @@ app.post('/authenticate', async (req, res) => {
 
 
 app.get('/add', function (req, res) {
-    if(req.cookies.token){
-        res.render('cad_moeda.ejs',{ images: images
+    if (req.cookies.token) {
+        res.render('tela_principal.ejs', {
+            images: images
         });
-    }else { 
+    } else {
         res.redirect('/');
-        
+
     }
 })
 
@@ -139,8 +140,8 @@ app.get('/wrong_passw', function (req, res) {
 
 
 app.get('/consulta', function (req, res) {
-    
-    res.render('cons_moeda.ejs');
+
+    res.render('tela_principal.ejs');
 })
 
 
@@ -154,9 +155,9 @@ app.post('/add', upload.single("txtFoto"), function (req, res) {
         alta: req.body.txtAlta,
         baixa: req.body.txtBaixa,
         foto: req.file.filename
-        
+
     })
-    
+
     money.save(function (err) {
         if (err) {
             console.log(err);
@@ -165,7 +166,7 @@ app.post('/add', upload.single("txtFoto"), function (req, res) {
             res.redirect('/add');
         }
     })
-    
+
 })
 
 let port = process.env.PORT || 3000;

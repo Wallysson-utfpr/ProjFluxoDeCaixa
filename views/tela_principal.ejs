@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moedas</title>
+
+  <!-- folha de estilo -->
+  <style>
+    body {
+      background: linear-gradient(-90deg, white, gray, lightblue);
+      color: #000;
+      font: 12px Verdana, sans-serif;
+    }
+
+
+    li {
+      list-style-type: none;
+    }
+
+    a {
+      font-size: 15pt;
+      color: blue;
+      text-decoration: none;
+    }
+
+    .btlogout {
+      position: absolute;
+      top: 3%;
+      left: 92%;
+      border: solid 1px;
+      border-radius: 2px 5px 2px 5px;
+      background-color: aqua;
+    }
+
+    #conteudo {
+      width: 70%;
+      float: right;
+      text-align: center;
+    }
+
+    #menu {
+      width: 30%;
+      margin: 0;
+      padding: 1%;
+      float: left;
+    }
+
+    #menu ul li {
+      margin: 0;
+      padding: 0px;
+      border-bottom: 1px solid #CCC;
+      text-align: left;
+      list-style-type: none;
+    }
+
+    #menu a:link {
+      background: #F5F5F5;
+      color: #666;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 8px;
+      display: block;
+    }
+
+    #menu a:hover {
+      background: #E5F0FF;
+      color: #039;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="conteudo">
+
+    <!-- <h1>Menu lateral em CSS</h1> -->
+
+  </div>
+
+  <div id="menu">
+    <ul>
+      <li><a href="link1.htm">Contas</a></li>
+      <li><a href="link2.htm">Beneficiários</a></li>
+      <li><a href="link3.htm">Lançamentos</a></li>
+    </ul>
+  </div>
+
+  <!-- limpa o cookie de sessão e faz logout -->
+  <div>
+    <p class="logoutlink">
+      <a href="/logout" class="btlogout">Logout</a>
+    </p>
+  </div>
+
+</body>
+
+</html>
