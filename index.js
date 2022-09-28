@@ -9,6 +9,7 @@ var path = require('path');
 var Moeda = require('./model/moeda');
 var Login = require('./model/login');
 var upload = require('./config/configMulter');
+var cliente = require('./model/cliente')
 
 app.use(cookieParser());
 app.use(bodyParser.json());
@@ -92,7 +93,7 @@ app.post('/authenticate', async (req, res) => {
 
 app.get('/add', function (req, res) {
   if (req.cookies.token) {
-    res.render('tela_principal.ejs', {
+    res.render('tela_principal2.ejs', {
 
     });
   } else {
@@ -114,6 +115,11 @@ app.get('/consulta', function (req, res) {
 
 app.get('/userExist', function (req, res) {
   res.render('userExist.ejs');
+})
+
+app.get('/cadconta', function (req, res) {
+
+  res.render('cad_conta.ejs');
 })
 
 app.post('/add', function (req, res) {

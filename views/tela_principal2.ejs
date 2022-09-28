@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenuFluxoDeCaixa</title>
+
+    <style>
+        :root {
+            --menu-size: 250px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+            box-sizing: border-box;
+            outline: none;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #eee;
+        }
+
+        header {
+            background-color: rgb(21, 22, 29);
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        #btnMenu {
+            cursor: pointer;
+            padding: 5px;
+            transition: all 0.5s;
+        }
+
+        #btnMenu:hover {
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: rgb(41, 57, 98);
+        }
+
+        #btnMenu:active {
+            background-color: rgb(3, 4, 7);
+        }
+
+        #btnClose {
+            padding: 8px;
+            background-color: rgb(78, 37, 37);
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #btnClose:active {
+            background-color: rgb(151, 73, 73);
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            width: var(--menu-size);
+            height: 100%;
+            background-color: rgb(40, 42, 54);
+        }
+
+        .menu ul {
+            list-style: none;
+        }
+
+        .menu ul li {
+            display: block;
+        }
+
+        .menu ul li a {
+            transition: background 0.3s;
+            display: block;
+            color: #fff;
+            font-size: 19px;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 10px 15px;
+        }
+
+        .menu ul li a:hover {
+            background-color: rgb(49, 54, 85);
+        }
+
+        .effect {
+            transition: margin 0.4s;
+        }
+
+        @media (min-width: 768px) {
+            #btnClose {
+                display: none;
+            }
+        }
+    </style>
+
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="preload" href="assets/js/script.js" as="script">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- <header>
+        <img src="/imagens/imgbackground.jpg" alt="Clique para abrir ou fechar o menu" id="btnMenu">
+    </header> -->
+
+    <div class="content">
+
+    </div>
+
+    <div id="menu" class="menu effect">
+        <nav>
+            <div style="text-align: right;">
+                <button id="btnClose">X</button>
+            </div>
+            <ul>
+                <li><a href="/cadconta">Nova Conta</a></li>
+                <li><a href="link2.htm">Beneficiários</a></li>
+                <li><a href="link3.htm">Lançamentos</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="/model/script.js"></script>
+</body>
+
+</html>
