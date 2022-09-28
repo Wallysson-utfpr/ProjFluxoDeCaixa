@@ -1,170 +1,155 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
+<html lang="en">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Login</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
 
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background: white;
-      }
+  <style>
+    body {
+      background: linear-gradient(-90deg, white, gray, lightblue);
+    }
 
-      .login {
-        padding: 15px;
-        height: 70vh;
-        background: transparent;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    .login {
+      padding: 15px;
+      height: 70vh;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-      .login-container {
-        max-height: 60%;
-        max-width: 40%;
-        width: 30rem;
-        background-color: white;
-        box-sizing: border-box;
-        padding: 32px;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      }
 
-      .login-form {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-      }
+    }
 
-      .login-input {
-        height: 40px;
-        width: 100%;
-        box-sizing: border-box;
-        padding-left: 8px;
-        border: 1px solid #c9c9c9;
-        border-radius: 10px;
-        outline: none;
-      }
+    .login-container {
+      max-height: 510px;
+      width: 300px;
+      background-color: rgb(206, 210, 220);
+      box-sizing: border-box;
+      padding: 32px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-      .login-input-border::after {
-        content: "";
-        display: block;
-        height: 1px;
-        width: 0;
-        margin-bottom: 16px;
-        background: linear-gradient(120deg, #0e0e0e, #ff1010);
-        transition: 0.3s, ease-in-out;
-      }
+    .login-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
-      .login-input:focus + .login-input-border::after {
-        width: 100%;
-      }
+    .login-input {
+      height: 40px;
+      width: 100%;
+      box-sizing: border-box;
+      padding-left: 8px;
+      border: unset;
+      outline: none;
+    }
 
-      .login-submit {
-        height: 48px;
-        width: 100%;
-        padding-left: 8px;
-        outline: none;
-        position: relative;
-        background-size: 200%;
-        background-color: #c9c9c9;
-        color: #fff;
-        font-size: 16px;
-        font-weight: bold;
-        border: unset;
-        margin-bottom: 10px;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: 0.5s, ease;
-      }
+    .login-input-border {
+      height: 1px;
+      width: 100%;
+      margin-bottom: 16px;
+      background-color: #cfcfcf;
+      transition: 0.3s, ease-in-out;
+    }
 
-      .login-submit:hover {
-        background-position: right;
-      }
+    .login-input-border::after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 0;
+      margin-bottom: 16px;
+      background: linear-gradient(120deg, #0e0e0e, #ff1010);
+      transition: 0.3s, ease-in-out;
+    }
 
-      .login-reset {
-        font-size: 13px;
-        color: #929292;
-        text-decoration: none;
-      }
+    .login-input:focus+.login-input-border::after {
+      width: 100%;
+    }
 
-      .bt-cancelar {
-        font-family: sans-serif;
-        font-size: 10pt;
-        color: #929292;
-        padding: 5px;
-        text-decoration: none;
-        margin-top: 10%;
-        -webkit-transition: box-shadow 300ms ease-in-out,
-          color 300ms ease-in-out;
-        transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-      }
+    .login-submit {
+      height: 48px;
+      width: 100%;
+      padding-left: 8px;
+      outline: none;
+      position: relative;
+      background: linear-gradient(120deg, #0c1dd5, #090909, #0c1dd5);
+      background-size: 200%;
+      margin-bottom: 32px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border: unset;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.5s, ease;
+    }
 
-      .bt-cadastro {
-        font-family: sans-serif;
-        font-size: 10pt;
-        color: #929292;
-        padding: 5px;
-        text-decoration: none;
-        margin-top: 10%;
-        -webkit-transition: box-shadow 300ms ease-in-out,
-          color 300ms ease-in-out;
-        transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-      }
-    </style>
-  </head>
+    .login-submit:hover {
+      background-position: right;
+    }
 
-  <body>
-    <div id="dv-modal" class="modal">
-      <div class="modal-content">
-        <main class="login">
-          <div class="login-container">
-            <h1 class="login-title">Log in</h1>
-            <form method="POST" action="/authenticate" class="login-form">
-              <input
-                class="login-input"
-                type="email"
-                name="iptEmail"
-                placeholder="Email"
-              />
-              <span class="login-input-border"></span>
-              <input
-                class="login-input"
-                type="password"
-                name="iptSenha"
-                placeholder="Senha"
-              />
-              <span class="login-input-border"></span>
-              <input
-                type="submit"
-                name="Login"
-                value="Login"
-                class="btn btn-primary login-submit"
-              />
-              <form action="GET">
-              <input
-                type="submit"
-                name="Cadastrar"
-                value="Cadastrar"
-                class="btn btn-primary login-submit"
-                href="/cadastrar" 
-              />
+    .login-reset {
+      font-size: 13px;
+      color: #929292;
+      text-decoration: none;
+    }
+
+    .bt-cancelar {
+      font-family: sans-serif;
+      font-size: 10pt;
+      color: #929292;
+      padding: 5px;
+      text-decoration: none;
+      margin-top: 10%;
+      -webkit-transition: box-shadow 300ms ease-in-out,
+        color 300ms ease-in-out;
+      transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    }
+
+    .bt-cadastro {
+      font-family: sans-serif;
+      font-size: 10pt;
+      color: #929292;
+      padding: 5px;
+      text-decoration: none;
+      margin-top: 10%;
+      -webkit-transition: box-shadow 300ms ease-in-out,
+        color 300ms ease-in-out;
+      transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="dv-modal" class="modal">
+    <div class="modal-content">
+      <main class="login">
+        <div class="login-container">
+          <h1 class="login-title">Login</h1>
+          <form method="POST" action="/authenticate" class="login-form">
+            <input class="login-input" type="email" name="iptEmail" placeholder="Email" />
+            <span class="login-input-border"></span>
+            <input class="login-input" type="password" name="iptSenha" placeholder="Senha" />
+            <span class="login-input-border"></span>
+            <input type="submit" name="Login" value="Login" class="btn btn-primary" />
+            <form action="GET">
+              <a href="/cadastrar" class="bt-cadastro">Cadastrar</a>
             </form>
-          </div>
-        </main>
-      </div>
+          </form>
+        </div>
+      </main>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
