@@ -7,120 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
 
-    <!-- folha de estilos -->
     <style>
         body {
-            /* background: linear-gradient(-90deg, blue, red, purple); */
-            background: linear-gradient(-90deg, white, gray, lightblue);
-        }
-
-        .login {
-            padding: 15px;
-            height: 70vh;
-            background: transparent;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .login-container {
-            max-height: auto;
-            width: auto;
-            background-color: rgb(206, 210, 220);
-            box-sizing: border-box;
-            padding: 32px;
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .login-form {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .login-input {
-            height: 40px;
-            width: 100%;
-            box-sizing: border-box;
-            padding-left: 8px;
-            border: unset;
-            outline: none;
-        }
-
-        .login-input-border {
-            height: 1px;
-            width: 100%;
-            margin-bottom: 16px;
-            background-color: #cfcfcf;
-            transition: 0.3s, ease-in-out;
-        }
-
-        .login-input-border::after {
-            content: "";
-            display: block;
-            height: 1px;
-            width: 0;
-            margin-bottom: 16px;
-            background: linear-gradient(120deg, #0e0e0e, #ff1010);
-            transition: 0.3s, ease-in-out;
-        }
-
-        .login-input:focus+.login-input-border::after {
-            width: 100%;
-        }
-
-        .login-submit {
-            height: 48px;
-            width: 100%;
-            padding-left: 8px;
-            outline: none;
-            position: relative;
-            background: linear-gradient(120deg, #0c1dd5, #090909, #0c1dd5);
-            background-size: 200%;
-            margin-bottom: 32px;
-            color: #fff;
-            font-size: 16px;
-            font-weight: bold;
-            border: unset;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: 0.5s, ease;
-        }
-
-        .login-submit:hover {
-            background-position: right;
-        }
-
-        .login-reset {
-            font-size: 13px;
-            color: #929292;
-            text-decoration: none;
-        }
-
-        .bt-cancelar {
-            font-family: sans-serif;
-            font-size: 10pt;
-            color: #929292;
-            padding: 5px;
-            text-decoration: none;
-            margin-top: 10%;
-            -webkit-transition: box-shadow 300ms ease-in-out,
-                color 300ms ease-in-out;
-            transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+            background: white;
         }
 
         .bt-cadastro {
             font-family: sans-serif;
             font-size: 14pt;
-            color: #929292;
+            color: white;
+            background-color: rgb(11, 86, 225);
             padding: 5px;
             text-decoration: none;
             margin-top: 10%;
+            cursor: pointer;
             -webkit-transition: box-shadow 300ms ease-in-out,
                 color 300ms ease-in-out;
             transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
@@ -131,23 +31,20 @@
 
 <body>
     <div id="dv-modal" class="modal">
-        <div class="modal-content">
-            <main class="login">
-                <div class="login-container">
-                    <h1 class="login-title">Cadastro</h1>
-                    <form method="POST" enctype="multipart/form-data">
-                        <!-- action="add" -->
-                        Nome: <input type="text" name="txtNome" placeholder="Nome.." class="txtCor" /> <br><br>
-                        Nasc: <input type="text" name="txtNasc" placeholder="xx/xx/xxxx" class="txtCor" /> <br><br>
-                        Cpf: <input type="text" name="txtCpf" placeholder="Cpf.." class="txtCor" /> <br> <br>
-                        End: <input type="text" name="txtEnd" placeholder="Endereço.." class="txtCor" /> <br> <br>
-                        <input type="submit" name="Adicionar" value="Cadastrar" class="btn btn-primary" /> <br><br>
-                    </form>
-                    </script>
-                    </form>
-                </div>
-            </main>
-        </div>
+        <main class="login">
+            <div class="login-container">
+                <h1 class="login-title">Cadastro</h1>
+                <form method="POST" enctype="multipart/form-data">
+                    Nome: <input type="text" name="txtNome" placeholder="Nome.." class="txtCor" /> <br><br>
+                    Nasc: <input type="text" name="txtNasc" placeholder="xx/xx/xxxx" class="txtCor" /> <br><br>
+                    Cpf: <input type="text" name="txtCpf" placeholder="Cpf.." class="txtCor" /> <br> <br>
+                    End: <input type="text" name="txtEnd" placeholder="Endereço.." class="txtCor" /> <br> <br>
+                    <input type="submit" name="Adicionar" value="Salvar" class="bt-cadastro" /> <br><br>
+                </form>
+                </script>
+                </form>
+            </div>
+        </main>
     </div>
 </body>
 

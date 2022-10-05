@@ -122,6 +122,10 @@ app.get('/cadconta', function (req, res) {
   res.render('cad_conta.ejs');
 })
 
+app.get('/fornecedores', function (req, res) {
+  res.render('fornecedores.ejs');
+})
+
 app.post('/add', function (req, res) {
   var cliente = new Cliente({
     nome: req.body.txtNome,
