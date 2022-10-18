@@ -42,6 +42,10 @@ app.get('/cadastrar', function (req, res) {
   res.render('cad_user.ejs');
 })
 
+app.get('/lancamentos', function (req, res) {
+  res.render('lancamentos.ejs');
+})
+
 
 // versão da função para cadastro de usuário - verifica se o email já está cadastrado.
 app.post('/cadastrar', async (req, res) => {
