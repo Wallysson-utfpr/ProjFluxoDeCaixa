@@ -2,316 +2,344 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <title>Lançamentos</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <title>Lançamentos</title>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-:root {
-  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.20), 0 1px 2px rgba(0, 0, 0, 0.30);
-}
+    :root {
+      --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.20), 0 1px 2px rgba(0, 0, 0, 0.30);
+    }
 
-* {
-  box-sizing: border-box;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  background-color: #ede8f1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  margin: 0;
-  font-family: 'Lato', sans-serif;
-}
+    body {
+      background-color: #ede8f1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+    }
 
-main {
-  max-width: 550px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    main {
+      max-width: 680px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-.resume {
-  display: flex;
-  padding: 10px 0;
-  gap: 40px;
-  width: 100%;
-  justify-content: center;
-  text-align: center;
-  flex-wrap: wrap;
-}
+    .resume {
+      display: flex;
+      padding: 10px 0;
+      gap: 40px;
+      width: 100%;
+      margin-bottom: 20px;
+      justify-content: center;
+      text-align: center;
+      flex-wrap: wrap;
+    }
 
-.resume > div {
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0px 0px 5px #ccc;
-  border-radius: 10px;
-  padding: 10px;
-  width: 150px;
-}
+    .resume>div {
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0px 0px 5px #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      width: 150px;
+    }
 
-.newItem {
-  display: flex;
-  gap: 10px;
-  align-items: end; 
-  width: 100%;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+    .newItem {
+      display: flex;
+      gap: 10px;
+      align-items: end;
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-.divDesc, .divType, .divAmount {
-  display: flex;
-  flex-direction: column;
-}
+    .divDesc,
+    .divType,
+    .divType2,
+    .divAmount {
+      display: flex;
+      flex-direction: column;
+    }
 
-.newItem > button {
-  background-color: #2C73D2;
-  color: white;
-  border: none;
-  padding: 0 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  height: 34px;
-}
+    .newItem>button {
+      background-color: #2C73D2;
+      color: white;
+      border: none;
+      padding: 0 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      height: 34px;
+    }
 
-input, select {
-  padding: 5px;
-}
+    input,
+    select {
+      padding: 5px;
+    }
 
-.divTable {
-  margin-top: 10px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+    .divTable {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
 
-table {
-  
-  width: 98%;
-  padding: 20px 0;
-  border-radius: 5px;
-}
+    table {
+      width: 100%;
+      padding: 20px 0;
+      border-radius: 5px;
+    }
 
-th {
-  text-align: start;
-  border-bottom: inset;
-  padding-bottom: 5px;
-}
+    th {
+      text-align: start;
+      border-bottom: inset;
+      padding-bottom: 5px;
+    }
 
-i {
-  font-size: 25px;
-}
+    i {
+      font-size: 25px;
+    }
 
-h1 {
-  letter-spacing: 1px;
-  margin: 0;
-  color: #2e75cc;
-}
+    h1 {
+      letter-spacing: 1px;
+      margin: 0;
+      color: #2e75cc;
+    }
 
-h4 {
-  margin: 0;
-  text-transform: uppercase;
-}
+    h4 {
+      margin: 0;
+      text-transform: uppercase;
+    }
 
-.bxs-chevron-up-circle {
-  color: #00C9A7;
-}
+    .bxs-chevron-up-circle {
+      color: #00C9A7;
+    }
 
-.bxs-chevron-down-circle {
-  color: #D83121;
-}
+    .bxs-chevron-down-circle {
+      color: #D83121;
+    }
 
-.columnAction {
-  width: 40px;
-  text-align: center;
-}
+    .columnAction {
+      width: 40px;
+      text-align: center;
+    }
 
-.total {
-  letter-spacing: 1px;
-    margin: 0;
-    color: #2e75cc;
-}
+    .total {
+      letter-spacing: 1px;
+      margin: 0;
+      color: #2e75cc;
+    }
 
-.incomes {
-  color: #2ecc71;
-}
+    .entrada {
+      color: #2ecc71;
+    }
 
-.expenses {
-  color: #c0392b;
-}
+    .despesa {
+      color: #c0392b;
+    }
 
-.columnAction > button {
-  background: transparent;
-  border: none;
-}
+    .columnAction>button {
+      margin-left: 20px;
+      background: transparent;
+      border: none;
+    }
 
-.columnAmount {
-  width: 30%;
-}
+    .columnAmount {
+      width: 30%;
+    }
 
-.columnType {
-  width: 80px;
-  text-align: center;
-}
-    </style>
+    .columnType {
+      width: 80px;
+      text-align: center;
+    }
+
+    .columnType2 {
+      width: 80px;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
-    <main>
-        <div class="resume">
-            <div>
-                <h4>Entradas</h4>
-                <h3><span class="incomes">0.00</span></h3>
-            </div>
-            <div>
-                <h4>Despesas</h4>
-                <h3><span class="expenses">0.00</span></h3>
-            </div>
-            <div>
-                <h4>Saldo atual</h4>
-                <h3><span class="total">0.00</span></h3>
-            </div>
-        </div>
+  <main>
+    <div class="resume">
+      <div>
+        <h4>Entradas</h4>
+        <h3><span class="entrada">0.00</span></h3>
+      </div>
+      <div>
+        <h4>Despesas</h4>
+        <h3><span class="despesa">0.00</span></h3>
+      </div>
+      <div>
+        <h4>Saldo atual</h4>
+        <h3><span class="total">0.00</span></h3>
+      </div>
+    </div>
 
-        <div class="newItem">
-            <div class="divDesc">
-                <label for="desc">Descrição</label>
-                <input type="text" id="desc" />
-            </div>
+    <div class="newItem">
+      <div class="divDesc">
+        <label for="desc">Descrição</label>
+        <input type="text" id="desc" />
+      </div>
 
-            <div class="divAmount">
-                <label for="amount">Valor</label>
-                <input type="number" id="amount" />
-            </div>
+      <div class="divAmount">
+        <label for="amount">Valor</label>
+        <input type="number" id="amount" />
+      </div>
 
-            <div class="divType">
-                <label for="type">Tipo</label>
-                <select id="type">
-                    <option>Entrada</option>
-                    <option>Saída</option>
-                </select>
-            </div>
-            <button id="btnNew">Incluir</button>
-        </div>
+      <div class="divType">
+        <label for="type">Tipo</label>
+        <select id="type">
+          <option>Entrada</option>
+          <option>Saída</option>
+        </select>
+      </div>
 
-        <div class="divTable">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Descrição</th>
-                        <th class="columnAmount">Valor</th>
-                        <th class="columnType">Tipo</th>
-                        <th class="columnAction"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-    </main>
+      <div class="divType2">
+        <label for="type">Conta</label>
+        <select id="type2">
+          <option>Caixa</option>
+          <option>Itau</option>
+        </select>
+      </div>
 
-    <script>
-        const tbody = document.querySelector("tbody");
-            const descItem = document.querySelector("#desc");
-            const amount = document.querySelector("#amount");
-            const type = document.querySelector("#type");
-            const btnNew = document.querySelector("#btnNew");
+      <button id="btnNew">Incluir</button>
+    </div>
 
-            const incomes = document.querySelector(".incomes");
-            const expenses = document.querySelector(".expenses");
-            const total = document.querySelector(".total");
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th class="columnAmount">Valor</th>
+            <th class="columnType">Tipo</th>
+            <th class="columnType2">Conta</th>
+            <th class="columnAction"></th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+  </main>
 
-            let items;
+  <script>
+    const tbody = document.querySelector("tbody");
+    const descItem = document.querySelector("#desc");
+    const amount = document.querySelector("#amount");
+    const type = document.querySelector("#type");
+    const type2 = document.querySelector("#type2");
+    const btnNew = document.querySelector("#btnNew");
 
-            btnNew.onclick = () => {
-                if (descItem.value === "" || amount.value === "" || type.value === "") {
-                    return alert("Preencha todos os campos!");
-                }
+    const entrada = document.querySelector(".entrada");
+    const despesa = document.querySelector(".despesa");
+    const total = document.querySelector(".total");
 
-                items.push({
-                    desc: descItem.value,
-                    amount: Math.abs(amount.value).toFixed(2),
-                    type: type.value,
-                });
+    let items;
 
-                setItensBD();
+    btnNew.onclick = () => {
+      if (descItem.value === "" || amount.value === "" || type.value === "") {
+        return alert("Preencha todos os campos!");
+      }
 
-                loadItens();
+      items.push({
+        desc: descItem.value,
+        amount: Math.abs(amount.value).toFixed(2),
+        type: type.value,
+        type2: type2.value,
+      });
 
-                descItem.value = "";
-                amount.value = "";
-            };
+      setItensBD();
 
-            function deleteItem(index) {
-                items.splice(index, 1);
-                setItensBD();
-                loadItens();
-            }
+      loadItens();
 
-            function insertItem(item, index) {
-                let tr = document.createElement("tr");
+      descItem.value = "";
+      amount.value = "";
+    };
 
-                tr.innerHTML = `
+    function deleteItem(index) {
+      items.splice(index, 1);
+      setItensBD();
+      loadItens();
+    }
+
+    function insertItem(item, index) {
+      let tr = document.createElement("tr");
+
+      tr.innerHTML = `
             <td>${item.desc}</td>
             <td>R$ ${item.amount}</td>
+
             <td class="columnType">${item.type === "Entrada"
-            ? '<i class="bx bxs-chevron-up-circle"></i>'
-            : '<i class="bx bxs-chevron-down-circle"></i>'
-            }</td>
+          ? '<i class="bx bxs-chevron-up-circle"></i>'
+          : '<i class="bx bxs-chevron-down-circle"></i>'
+        }</td>
+
+        <td class="columnTypee">${item.type2 === "Caixa"
+          ? '<i><td>Caixa</td></i>'
+          : '<i><td>Itau</td></i>'
+        }</td>
+
             <td class="columnAction">
             <button onclick="deleteItem(${index})"><i class='bx bx-trash'></i></button>
             </td>
             `;
-                tbody.appendChild(tr);
-            }
+      tbody.appendChild(tr);
+    }
 
-            function loadItens() {
-                items = getItensBD();
-                tbody.innerHTML = "";
-                items.forEach((item, index) => {
-                    insertItem(item, index);
-                });
+    function loadItens() {
+      items = getItensBD();
+      tbody.innerHTML = "";
+      items.forEach((item, index) => {
+        insertItem(item, index);
+      });
 
-                getTotals();
-            }
+      getTotals();
+    }
 
-            function getTotals() {
-                const amountIncomes = items
-                    .filter((item) => item.type === "Entrada")
-                    .map((transaction) => Number(transaction.amount));
+    function getTotals() {
+      const amountEntrada = items
+        .filter((item) => item.type === "Entrada")
+        .map((transaction) => Number(transaction.amount));
 
-                const amountExpenses = items
-                    .filter((item) => item.type === "Saída")
-                    .map((transaction) => Number(transaction.amount));
+      const amountDespesa = items
+        .filter((item) => item.type === "Saída")
+        .map((transaction) => Number(transaction.amount));
 
-                const totalIncomes = amountIncomes
-                    .reduce((acc, cur) => acc + cur, 0)
-                    .toFixed(2);
+      const totalRendimento = amountEntrada
+        .reduce((acc, cur) => acc + cur, 0)
+        .toFixed(2);
 
-                const totalExpenses = Math.abs(
-                    amountExpenses.reduce((acc, cur) => acc + cur, 0)
-                ).toFixed(2);
+      const totalDespesa = Math.abs(
+        amountDespesa.reduce((acc, cur) => acc + cur, 0)
+      ).toFixed(2);
 
-                const totalItems = (totalIncomes - totalExpenses).toFixed(2);
+      const totalItems = (totalRendimento - totalDespesa).toFixed(2);
 
-                incomes.innerHTML = totalIncomes;
-                expenses.innerHTML = totalExpenses;
-                total.innerHTML = totalItems;
-            }
+      entrada.innerHTML = totalRendimento;
+      despesa.innerHTML = totalDespesa;
+      total.innerHTML = totalItems;
+    }
 
-            const getItensBD = () => JSON.parse(localStorage.getItem("db_items")) ?? [];
-            const setItensBD = () =>
-                localStorage.setItem("db_items", JSON.stringify(items));
+    const getItensBD = () => JSON.parse(localStorage.getItem("db_items")) ?? [];
+    const setItensBD = () => localStorage.setItem("db_items", JSON.stringify(items));
 
-            loadItens();
+    loadItens();
 
-    </script>
+  </script>
 </body>
 
 </html>

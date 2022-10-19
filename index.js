@@ -93,8 +93,6 @@ app.post('/authenticate', async (req, res) => {
   }
 })
 
-
-
 app.get('/add', function (req, res) {
   if (req.cookies.token) {
     res.render('tela_principal2.ejs', {
