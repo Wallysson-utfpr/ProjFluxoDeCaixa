@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
-    <title>MenuFluxoDeCaixa</title>
+    <title>Fluxo De Caixa</title>
 
     <style>
         :root {
@@ -58,9 +58,9 @@
 
         #btnClose {
             padding: 8px;
-            background-color: rgb(78, 37, 37);
+            background-color: rgb(193, 223, 60);
             color: #fff;
-            font-size: 20px;
+            font-size: 40px;
             font-weight: bold;
         }
 
@@ -74,6 +74,14 @@
             width: var(--menu-size);
             height: 100%;
             background-color: rgb(40, 42, 54);
+        }
+
+        .menu2 {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: var(--menu-size);
+            background-color: rgb(210, 21, 21);
         }
 
         .menu ul {
@@ -102,6 +110,26 @@
             transition: margin 0.4s;
         }
 
+        .teste {
+            margin-top: 50px;
+        }
+
+        .cadcontateste {
+            /* background-color: rgb(249, 7, 7); */
+            background-color: #636161;
+            margin-bottom: 10px;
+        }
+
+        .tituloMenu {
+            font-size: 22pt;
+            margin-left: 48%;
+            color: white;
+            list-style-type: none;
+            font-weight: bold;
+            position: absolute;
+
+        }
+
         @media (min-width: 768px) {
             #btnClose {
                 display: none;
@@ -116,28 +144,22 @@
 
 <body>
 
-    <!-- <header>
-        <img src="/imagens/imgbackground.jpg" alt="Clique para abrir ou fechar o menu" id="btnMenu">
-    </header> -->
-
-    <div class="content">
-
-    </div>
+    <nav class="navbar navbar-light" style="background-color: #636161; width: auto; height: 50px; position: inherit;">
+        <li class="tituloMenu">FLUXO DE CAIXA</li>
+    </nav>
 
     <div id="menu" class="menu effect">
         <nav>
-            <div style="text-align: right;">
-                <button id="btnClose">X</button>
-            </div>
-            <ul>
-                <li><a href="/cadconta">Nova Conta</a></li>
-                <li><a href="/fornecedores">Fornecedores</a></li>
-                <li><a href="/lancamentos">Lançamentos</a></li>
+            <ul class="teste">
+                <li class="cadcontateste"><a href="/cadconta">Nova Conta</a></li>
+                <li class="cadcontateste"><a href="/fornecedores">Fornecedores</a></li>
+                <li class="cadcontateste"><a href="/lancamentos">Lançamentos</a></li>
             </ul>
         </nav>
     </div>
 
     <script src="/model/script.js"></script>
+
 </body>
 
 </html>
