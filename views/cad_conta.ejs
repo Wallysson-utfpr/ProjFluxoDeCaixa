@@ -5,18 +5,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Cadastro</title>
 
     <style>
         body {
-            background: white;
+            background: rgb(202, 199, 199);
         }
 
         .bt-cadastro {
             font-family: sans-serif;
             font-size: 14pt;
             color: white;
-            background-color: rgb(11, 86, 225);
+            background-color: rgb(27, 27, 29);
             padding: 5px;
             text-decoration: none;
             margin-top: 10%;
@@ -25,27 +25,49 @@
                 color 300ms ease-in-out;
             transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
         }
+        .topBar{
+            background-color: rgb(11, 11, 12);
+        }
+        .title{
+            ont-family: sans-serif;
+            font-size: 24pt;
+            color: white;
+            padding-left: 2%;  
+        }
+        .formulario{
+            ont-family: sans-serif;
+            font-size: 14pt;
+            color: black;
+            padding-left: 2%;  
+        }
+
+
     </style>
 
 </head>
 
 <body>
-    <div id="dv-modal" class="modal">
-        <main class="login">
-            <div class="login-container">
-                <h1 class="login-title">Cadastro</h1>
+    <div class="topBar">
+        <h1 class="title">Cadastro de Contas</h1>
+      
+    </div>
+
+    <!-- <div id="dv-modal" class="modal"> -->
+        <main class="formulario">
+            <!-- <div class="login-container"> -->
+                
                 <form method="POST" enctype="multipart/form-data">
-                    Nome: <input type="text" name="txtNome" placeholder="Nome.." class="txtCor" /> <br><br>
-                    Nasc: <input type="text" name="txtNasc" placeholder="xx/xx/xxxx" class="txtCor" /> <br><br>
-                    Cpf: <input type="text" name="txtCpf" placeholder="Cpf.." class="txtCor" /> <br> <br>
-                    End: <input type="text" name="txtEnd" placeholder="Endereço.." class="txtCor" /> <br> <br>
-                    <input type="submit" name="Adicionar" value="Salvar" class="bt-cadastro" /> <br><br>
+                    Nome da Conta: <input type="text" name="txtNome" placeholder="Nome.." class="txtCor" /> <br><br>
+                    Saldo Inicial: <input type="text" name="txtSaldo" placeholder="0,00" class="txtCor" /> <br><br>
+                    <!-- Cpf: <input type="text" name="txtCpf" placeholder="Cpf.." class="txtCor" /> <br> <br>
+                    End: <input type="text" name="txtEnd" placeholder="Endereço.." class="txtCor" /> <br> <br> -->
+                    <input type="submit" name="Adicionar" value="Salvar" class="bt-cadastro" /> <br><br> 
                 </form>
                 </script>
                 </form>
-            </div>
+            <!-- </div> -->
         </main>
-    </div>
+    <!-- </div> -->
 </body>
 
 </html>
