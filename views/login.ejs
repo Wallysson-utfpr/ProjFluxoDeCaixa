@@ -14,13 +14,13 @@
 
     <style>
       body {
-        background-image: url(/imagens/background-login.jpg);
+        /*background-image: url('../public/imagens/background-login.jpg');*/
         font-family: "Inter", sans-serif;
       }
       .login {
         padding: 15px;
         height: 70vh;
-        background: transparent;
+        /* background: transparent; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -35,6 +35,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        /*background-image: url("../imagens/imgbackground.jpg");*/
       }
 
       .login-form {
@@ -112,6 +113,7 @@
         display: flex;
         align-items: flex-end;
         color: #1238ff;
+        margin-bottom: 30px;
       }
       .btn-primary {
         width: 90px;
@@ -123,11 +125,14 @@
       .modal-content {
         width: 100%;
         height: 100%;
+        background-image: url('../imagens/background-login.jpg');
+        background-size:cover;
       }
     </style>
   </head>
 
   <body>
+    
     <div id="dv-modal" class="modal">
       <div class="modal-content">
         <main class="login">
@@ -148,15 +153,23 @@
                 placeholder="Senha"
               />
               <span class="login-input-border-2"></span>
+
+              
+
               <input
                 type="submit"
                 name="Login"
                 value="Login"
                 class="btn btn-primary"
               />
+              
               <form action="GET">
                 <a href="/cadastrar" class="bt-cadastro"><u>Cadastrar</u></a>
+                <a> </a>
               </form>
+
+
+
             </form>
           </div>
         </main>
