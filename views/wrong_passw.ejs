@@ -1,59 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- modal de aviso se o e-mail ou a senha são inválidos -->
+  <!-- modal de aviso se o e-mail ou a senha são inválidos -->
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Login</title>
-        
-        <!-- folha de estilos -->
-        <style>
-            body {
-                /* background: linear-gradient(-90deg, blue, red, purple); */
-                background: linear-gradient(-90deg, white, gray, lightblue);
-            }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- folha de estilos -->
+    <style>
+      body {
+        background-color: #e9e4e4;
+        font-family: "Inter", sans-serif;
+      }
 
-            .wp {
-                padding: 15px;
-                height: 70vh;
-                background: transparent;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
+      .wp {
+        padding: 15px;
+        height: 70vh;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-            .wp-container {
-                max-height: 510px;
-                width: 300px;
-                background-color: rgb(206, 210, 220);
-                box-sizing: border-box;
-                padding: 32px;
-                border-radius: 8px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-    
-        </style>
+      .wp-container {
+        max-height: 510px;
+        width: 300px;
+        box-sizing: border-box;
+        padding: 32px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      a {
+        width: 30px;
+        height: 15px;
+        color: #fff;
+        background-color: black;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
 
-    </head>
-
-    <body>
-        <div id="dv-modal" class="modal">
-            <div class="modal-content">
-                <main class="wp">
-                    <div class="wp-container">
-                        
-                        <h2 class = "wp-title"> Dados incorretos!</h2>
-                        <p>
-                            <a href="/">Tentar Novamente?</a>
-                        </p>
-                    </div>
-                </main>
-            </div>
-        </div>
-    </body>
-
+  <body>
+    <div id="dv-modal" class="modal">
+      <div class="modal-content">
+        <main class="wp">
+          <div class="wp-container">
+            <h2 class="wp-title">Dados incorretos!</h2>
+            <p>
+              <a href="/">Tentar Novamente</a>
+            </p>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
 </html>
