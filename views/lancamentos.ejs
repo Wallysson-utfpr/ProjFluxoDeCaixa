@@ -24,14 +24,13 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* justify-content: center; */
-      min-height: 100vh;
+      min-height: auto;
       margin-top: 8%;
       font-family: 'Lato', sans-serif;
     }
 
     main {
-      max-width: 680px;
+      max-width: 700px;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -170,6 +169,24 @@
       width: 80px;
       text-align: center;
     }
+
+    .pgBtVoltar {
+      position: absolute;
+      margin-left: 88%;
+      margin-top: 22%;
+      height: auto;
+      width: 30pt;
+    }
+
+    .btVoltar {
+      background: #0066A2;
+      color: white;
+      border-style: outset;
+      border-color: #0066A2;
+      font: bold 20px arial, sans-serif;
+      text-shadow: none;
+      text-decoration: none;
+    }
   </style>
 </head>
 
@@ -218,6 +235,7 @@
       </div>
 
       <button id="btnNew">Incluir</button>
+
     </div>
 
     <div class="divTable">
@@ -232,8 +250,13 @@
           </tr>
         </thead>
         <tbody>
+          <!--Aqui entra os dados informados nas colunas-->
         </tbody>
       </table>
+
+      <p class="pgBtVoltar">
+        <a class="btVoltar" href="/">Voltar</a>
+      </p>
   </main>
 
   <script>
