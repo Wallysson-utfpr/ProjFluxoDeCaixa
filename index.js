@@ -6,7 +6,6 @@ const app = express();
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var path = require('path');
-var Moeda = require('./model/moeda');
 var Login = require('./model/login');
 var upload = require('./config/configMulter');
 var cliente = require('./model/cliente')
