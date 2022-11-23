@@ -44,6 +44,23 @@
             color: black;
             padding-left: 2%;  
         }
+        .pgBtVoltar {
+            position: absolute;
+            margin-left: 90%;
+            margin-top: 20%;
+            height: auto;
+            width: 30pt;
+        }
+
+        .btVoltar {
+            background: #0066A2;
+            color: white;
+            border-style: outset;
+            border-color: #0066A2;
+            font: bold 20px arial, sans-serif;
+            text-shadow: none;
+            text-decoration: none;
+        }
 
 
     </style>
@@ -53,25 +70,17 @@
 <body>
     <div class="topBar">
         <h1 class="title">Cadastro de Contas</h1>
-      
     </div>
-
-    <!-- <div id="dv-modal" class="modal"> -->
         <main class="formulario">
-            <!-- <div class="login-container"> -->
-                
                 <form method="POST" enctype="multipart/form-data">
                     Nome da Conta: <input type="text" name="txtNome" placeholder="Nome.." class="txtCor" /> <br><br>
                     Saldo Inicial: <input type="text" name="txtSaldo" placeholder="0,00" class="txtCor" /> <br><br>
-                    <!-- Cpf: <input type="text" name="txtCpf" placeholder="Cpf.." class="txtCor" /> <br> <br>
-                    End: <input type="text" name="txtEnd" placeholder="Endereço.." class="txtCor" /> <br> <br> -->
-                    <input type="submit" name="Adicionar" value="Salvar" class="bt-cadastro" /> <br><br> 
+                    <input type="submit" name="Adicionar" value="Salvar" class="bt-cadastro" /> 
                 </form>
-                </script>
-                </form>
-            <!-- </div> -->
+                <p class="pgBtVoltar">
+                    <a class="btVoltar" href="/">Voltar</a>
+                </p>
         </main>
-    <!-- </div> -->
 </body>
 
 </html>

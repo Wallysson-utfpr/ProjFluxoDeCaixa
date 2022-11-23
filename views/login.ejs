@@ -14,13 +14,12 @@
 
     <style>
       body {
-        /*background-image: url('../public/imagens/background-login.jpg');*/
+        background-image: url('../imagens/background-login.jpg' );
+        background-size: 460px 710px;
         font-family: "Inter", sans-serif;
       }
       .login {
         padding: 15px;
-        height: 70vh;
-        /* background: transparent; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -28,6 +27,7 @@
 
       .login-container {
         max-height: 510px;
+        margin-top: 5%;
         width: 300px;
         box-sizing: border-box;
         padding: 32px;
@@ -35,7 +35,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        /*background-image: url("../imagens/imgbackground.jpg");*/
       }
 
       .login-form {
@@ -100,33 +99,28 @@
         padding: 5px;
         text-decoration: none;
         margin-top: 10%;
-        -webkit-transition: box-shadow 300ms ease-in-out,
-          color 300ms ease-in-out;
-        transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
       }
 
       .bt-cadastro {
+        position: absolute;
         font-style: normal;
+        text-decoration: none;
         font-weight: 400;
+        margin-top: 4%;
+        margin-right: 11%;
         font-size: 12px;
         line-height: 15px;
         display: flex;
         align-items: flex-end;
         color: #1238ff;
-        margin-bottom: 30px;
       }
       .btn-primary {
         width: 90px;
+        margin-top: 5%;
         background-color: #000000;
         border-radius: 6px;
         color: #e9e4e4;
         padding: 6px;
-      }
-      .modal-content {
-        width: 100%;
-        height: 100%;
-        background-image: url('../imagens/background-login.jpg');
-        background-size:cover;
       }
     </style>
   </head>
@@ -154,8 +148,6 @@
               />
               <span class="login-input-border-2"></span>
 
-              
-
               <input
                 type="submit"
                 name="Login"
@@ -164,11 +156,8 @@
               />
               
               <form action="GET">
-                <a href="/cadastrar" class="bt-cadastro"><u>Cadastrar</u></a>
-                <a> </a>
+                <a href="/cadastrar" class="bt-cadastro"><h3>Cadastre-se</h3></a>
               </form>
-
-
 
             </form>
           </div>
