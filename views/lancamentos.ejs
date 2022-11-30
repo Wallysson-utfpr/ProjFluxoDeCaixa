@@ -25,7 +25,7 @@
       flex-direction: column;
       align-items: center;
       min-height: auto;
-      margin-top: 8%;
+      margin-top: 4%;
       font-family: 'Lato', sans-serif;
     }
 
@@ -40,7 +40,7 @@
     .resume {
       display: flex;
       padding: 10px 0;
-      gap: 70px;
+      gap: 100px;
       width: 100%;
       margin-bottom: 20px;
       justify-content: center;
@@ -58,10 +58,11 @@
     }
 
     .newItem {
+      margin-top: 4%;
       display: flex;
-      gap: 10px;
+      gap: 8px;
       align-items: end;
-      width: 100%;
+      width: 130%;
       justify-content: center;
       flex-wrap: wrap;
     }
@@ -69,6 +70,7 @@
     .divDesc,
     .divType,
     .divType2,
+    .divType3,
     .divAmount {
       display: flex;
       flex-direction: column;
@@ -91,13 +93,10 @@
 
     .divTable {
       margin-top: 20px;
-      width: 100%;
-      display: flex;
-      justify-content: center;
     }
 
     table {
-      width: 100%;
+      width: 800px;
       padding: 20px 0;
       border-radius: 5px;
     }
@@ -131,10 +130,6 @@
       color: #D83121;
     }
 
-    .columnAction {
-      width: 40px;
-      text-align: center;
-    }
 
     .total {
       letter-spacing: 1px;
@@ -150,35 +145,59 @@
       color: #c0392b;
     }
 
-    .columnAction>button {
-      margin-left: 20px;
+    .columnAction>button {  
+      margin-left: 100px;
       background: transparent;
       border: none;
     }
 
+    .columnAction> {  
+     display: none;
+    }
+    .columnDesc {
+      width: 200px;
+    }
+
     .columnAmount {
-      width: 30%;
+    width: 150px;
+    }
+
+    .tdAmount {
+      width: 20%;
     }
 
     .columnType {
-      width: 80px;
-      text-align: center;
+      width: 150px;
     }
 
     .columnType2 {
-      width: 80px;
-      text-align: center;
+      width: 150px;
     }
+
+    .columnType3 {
+      width: 170px;
+    }
+
+    .columnTypee2 {
+      display: none;
+    }
+
+    .columnTypee3 {
+      display: none;
+    }
+
 
     .pgBtVoltar {
       position: absolute;
-      margin-left: 88%;
-      margin-top: 22%;
+      margin-left: 68%;
+      margin-top: 7%;
       height: auto;
       width: 30pt;
     }
+    
 
     .btVoltar {
+      position: absolute;
       background: #0066A2;
       color: white;
       border-style: outset;
@@ -186,6 +205,14 @@
       font: bold 20px arial, sans-serif;
       text-shadow: none;
       text-decoration: none;
+    }
+
+    .bx-trash {
+      margin-left: -700%;
+    }
+
+    #btnNew {
+      margin-top: 2%;
     }
   </style>
 </head>
@@ -209,6 +236,11 @@
 
     <div class="newItem">
       <div class="divDesc">
+        <label for="nome">Fornecedor</label>
+        <input type="text" id="nome" />
+      </div>
+
+      <div class="divDesc">
         <label for="desc">Descrição</label>
         <input type="text" id="desc" />
       </div>
@@ -227,8 +259,16 @@
       </div>
 
       <div class="divType2">
-        <label for="type">Conta</label>
+        <label for="type">Conta Débito</label>
         <select id="type2">
+          <option>Caixa</option>
+          <option>Itau</option>
+        </select>
+      </div>
+
+      <div class="divType3">
+        <label for="type">Conta Crédito</label>
+        <select id="type3">
           <option>Caixa</option>
           <option>Itau</option>
         </select>
@@ -242,18 +282,19 @@
       <table>
         <thead>
           <tr>
-            <th>Descrição</th>
+            <th class="columnDesc">Fornecedor</th>
+            <th class="columnDesc">Descrição</th>
             <th class="columnAmount">Valor</th>
             <th class="columnType">Tipo</th>
-            <th class="columnType2">Conta</th>
-            <th class="columnAction"></th>
+            <th class="columnType2">Conta Débito</th>
+            <th class="columnType3">Conta Crédito</th>
+            <th class="columnAction">Deletar</th>
           </tr>
         </thead>
         <tbody>
           <!--Aqui entra os dados informados nas colunas-->
         </tbody>
       </table>
-
       <p class="pgBtVoltar">
         <a class="btVoltar" href="/">Voltar</a>
       </p>
@@ -261,10 +302,12 @@
 
   <script>
     const tbody = document.querySelector("tbody");
+    const descNome = document.querySelector("#nome");
     const descItem = document.querySelector("#desc");
     const amount = document.querySelector("#amount");
     const type = document.querySelector("#type");
     const type2 = document.querySelector("#type2");
+    const type3 = document.querySelector("#type3");
     const btnNew = document.querySelector("#btnNew");
 
     const entrada = document.querySelector(".entrada");
@@ -279,16 +322,18 @@
       }
 
       items.push({
+        nome: descNome.value,
         desc: descItem.value,
         amount: Math.abs(amount.value).toFixed(2),
         type: type.value,
         type2: type2.value,
+        type3: type3.value,
       });
 
       setItensBD();
 
       loadItens();
-
+      descNome.value = "";
       descItem.value = "";
       amount.value = "";
     };
@@ -303,17 +348,23 @@
       let tr = document.createElement("tr");
 
       tr.innerHTML = `
-            <td>${item.desc}</td>
-            <td>R$ ${item.amount}</td>
+            <td class="tdDesc">${item.nome}</td>
+            <td class="tdDesc">${item.desc}</td>
+            <td class="tdAmount">R$ ${item.amount}</td>
 
             <td class="columnType">${item.type === "Entrada"
           ? '<i class="bx bxs-chevron-up-circle"></i>'
           : '<i class="bx bxs-chevron-down-circle"></i>'
         }</td>
 
-        <td class="columnTypee">${item.type2 === "Caixa"
-          ? '<i><td>Caixa</td></i>'
-          : '<i><td>Itau</td></i>'
+        <td class="columnTypee2">${item.type2 === "Caixa"
+          ? '<i><td class="tdType2">Caixa</td></i>'
+          : '<i><td class="tdType2">Itau</td></i>'
+        }</td>
+
+         <td class="columnTypee3">${item.type3 === "Caixa"
+          ? '<i><td class="tdType3">Caixa</td></i>'
+          : '<i><td class="tdType3">Itau</td></i>'
         }</td>
 
             <td class="columnAction">
