@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
   <title>Lançamentos</title>
+  
 
   <style>
     @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
@@ -235,9 +236,13 @@
     </div>
 
     <div class="newItem">
-      <div class="divDesc">
+
+       <div class="divDesc">
         <label for="nome">Fornecedor</label>
-        <input type="text" id="nome" />
+        <select id="nome">
+          <option>Caixa</option>
+          <option>Itau</option>
+        </select>
       </div>
 
       <div class="divDesc">
@@ -348,7 +353,11 @@
       let tr = document.createElement("tr");
 
       tr.innerHTML = `
-            <td class="tdDesc">${item.nome}</td>
+          <td class="columnTypee3">${item.nome === "Caixa"
+          ? '<i><td class="tdType3">Caixa</td></i>'
+          : '<i><td class="tdType3">Itau</td></i>'
+        }</td>
+          
             <td class="tdDesc">${item.desc}</td>
             <td class="tdAmount">R$ ${item.amount}</td>
 
