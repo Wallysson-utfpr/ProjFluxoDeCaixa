@@ -25,7 +25,7 @@
         background-color: rgb(27, 27, 29);
         padding: 5px;
         text-decoration: none;
-        margin-top: 10%;
+        margin-top: 2%;
         cursor: pointer;
         -webkit-transition: box-shadow 300ms ease-in-out,
           color 300ms ease-in-out;
@@ -33,16 +33,19 @@
       }
       .topBar {
         background-color: rgb(11, 11, 12);
+        margin: 0 auto;
       }
       .title {
         font-size: 24pt;
         color: white;
-        padding-left: 2%;
+        text-align: center;
+        margin-top: 30px;
       }
       .formulario {
         font-size: 14pt;
         color: black;
-        padding-left: 2%;
+        text-align: center;
+        padding-top: 60px;
       }
       .pgBtVoltar {
         position: absolute;
@@ -70,16 +73,16 @@
     </div>
     <main class="formulario">
       <form action="">
-        <h4>Nome da Conta:</h4>
+        <h4>Nome da Conta</h4>
+        <input type="text" id="nomeConta" class="txtCor" />
+        <br />
+        <h4 class="saldo">Saldo Inicial</h4>
         <input
           type="text"
-          id="nomeConta"
-          placeholder="Nome conta.."
+          name="txtSaldo"
+          placeholder="R$0,00"
           class="txtCor"
         />
-        <br />
-        <h4>Saldo Inicial:</h4>
-        <input type="text" name="txtSaldo" placeholder="0,00" class="txtCor" />
         <br />
         <input
           type="submit"
