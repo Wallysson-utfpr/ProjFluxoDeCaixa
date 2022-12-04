@@ -1,113 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fornecedores</title>
     <!-- folha de estilos -->
     <style>
-        body {
-            background: white;
-        }
+      body {
+        background: #ede8f1;
+      }
 
-        .login-input:focus+.login-input-border::after {
-            width: 100%;
-        }
+      .login-input:focus + .login-input-border::after {
+        width: 100%;
+      }
 
-        .login-submit {
-            height: 48px;
-            width: 100%;
-            padding-left: 8px;
-            outline: none;
-            position: relative;
-            background: linear-gradient(120deg, #0c1dd5, #090909, #0c1dd5);
-            background-size: 200%;
-            margin-bottom: 32px;
-            color: #fff;
-            font-size: 16px;
-            font-weight: bold;
-            border: unset;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: 0.5s, ease;
-        }
+      .login-submit {
+        height: 48px;
+        width: 100%;
+        padding-left: 8px;
+        outline: none;
+        position: relative;
+        background: linear-gradient(120deg, #0c1dd5, #090909, #0c1dd5);
+        background-size: 200%;
+        margin-bottom: 32px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        border: unset;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.5s, ease;
+      }
 
-        .login-submit:hover {
-            background-position: right;
-        }
+      .login-submit:hover {
+        background-position: right;
+      }
 
-        .login-reset {
-            font-size: 13px;
-            color: #929292;
-            text-decoration: none;
-        }
+      .login-reset {
+        font-size: 13px;
+        color: #929292;
+        text-decoration: none;
+      }
 
-        .bt-cancelar {
-            font-family: sans-serif;
-            font-size: 10pt;
-            color: #929292;
-            padding: 5px;
-            text-decoration: none;
-            margin-top: 10%;
-        }
+      .bt-cancelar {
+        font-family: sans-serif;
+        font-size: 10pt;
+        color: #929292;
+        padding: 5px;
+        text-decoration: none;
+        margin-top: 10%;
+      }
 
-        .bt-cadastro {
-            font-family: sans-serif;
-            font-size: 14pt;
-            color: #929292;
-            padding: 5px;
-            text-decoration: none;
-            margin-top: 10%;
-        }
+      .bt-cadastro {
+        font-family: sans-serif;
+        font-size: 14pt;
+        color: #929292;
+        padding: 5px;
+        text-decoration: none;
+        margin-top: 10%;
+      }
 
-        .txtInput {
-            margin-top: 10px;
-            width: 40%;
-            height: 30px;
-        }
+      .txtInput {
+        margin-top: 10px;
+        width: 40%;
+        height: 30px;
+      }
 
-        .pgBtVoltar {
-            position: absolute;
-            margin-left: 92%;
-            margin-top: 18%;
-            height: auto;
-            width: 30pt;
-        }
+      .pgBtVoltar {
+        position: absolute;
+        margin-left: 92%;
+        margin-top: 18%;
+        height: auto;
+        width: 30pt;
+      }
 
-        .btVoltar {
-            background: #0066A2;
-            color: white;
-            border-style: outset;
-            border-color: #0066A2;
-            font: bold 20px arial, sans-serif;
-            text-shadow: none;
-            text-decoration: none;
-        }
+      .btVoltar {
+        background: #0066a2;
+        color: white;
+        border-style: outset;
+        border-color: #0066a2;
+        font: bold 20px arial, sans-serif;
+        text-shadow: none;
+        text-decoration: none;
+      }
     </style>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div id="dv-modal" class="modal">
-        <div class="modal-content">
-            <main class="login">
-                <div class="login-container">
-                    <h1 class="login-title">Geral</h1>
-                    <form method="POST" enctype="multipart/form-data">
-                        Nome da Empresa:<br> <input type="text" name="txtNomeEmpresa" class="txtInput" /><br><br>
-                        CNPJ:<br> <input type="text" name="txtCNPJ" class="txtInput" /> <br> <br>
-                        E-mail:<br> <input type="text" name="txtEnd" class="txtInput" /> <br> <br>
-                        <input type="submit" name="Adicionar" value="Cadastrar" class="btn btn-primary" /> <br><br>
-                    </form>
-                </div>
-                <p class="pgBtVoltar">
-                    <a class="btVoltar" href="/">Voltar</a>
-                </p>
-            </main>
-        </div>
+      <div class="modal-content">
+        <main class="login">
+          <div class="login-container">
+            <h1 class="login-title">Geral</h1>
+            <form method="POST" enctype="multipart/form-data">
+              Nome da Empresa:<br />
+              <input
+                type="text"
+                name="txtNomeEmpresa"
+                class="txtInput"
+              /><br /><br />
+              CNPJ:<br />
+              <input type="text" name="txtCNPJ" class="txtInput" /> <br />
+              <br />
+              E-mail:<br />
+              <input type="text" name="txtEnd" class="txtInput" /> <br />
+              <br />
+              <input
+                type="submit"
+                name="Adicionar"
+                value="Cadastrar"
+                class="btn btn-primary"
+              />
+              <br /><br />
+            </form>
+          </div>
+          <p class="pgBtVoltar">
+            <a class="btVoltar" href="/">Voltar</a>
+          </p>
+        </main>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
