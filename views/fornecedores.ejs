@@ -1,143 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fornecedores</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- folha de estilos -->
-    <style>
-      body {
-        background: #ede8f1;
-        font-family: "Inter", sans-serif;
-      }
 
-      .login-input:focus + .login-input-border::after {
-        width: 100%;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fornecedores</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
+  <!-- folha de estilos -->
+  <style>
+    body {
+      background: #ede8f1;
+      font-family: "Inter", sans-serif;
+    }
 
-      .login-submit {
-        height: 48px;
-        width: 100%;
-        padding-left: 8px;
-        outline: none;
-        position: relative;
-        background: linear-gradient(120deg, #0c1dd5, #090909, #0c1dd5);
-        background-size: 200%;
-        margin-bottom: 32px;
-        color: #fff;
-        font-size: 16px;
-        font-weight: bold;
-        border: unset;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: 0.5s, ease;
-      }
+    .login-input:focus+.login-input-border::after {
+      width: 100%;
+    }
 
-      .login-submit:hover {
-        background-position: right;
-      }
+    .login-submit {
+      height: 48px;
+      width: 100%;
+      padding-left: 8px;
+      outline: none;
+      position: relative;
+      background: linear-gradient(120deg, #0c1dd5, #090909, #0c1dd5);
+      background-size: 200%;
+      margin-bottom: 32px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border: unset;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.5s, ease;
+    }
 
-      .login-reset {
-        font-size: 13px;
-        color: #929292;
-        text-decoration: none;
-      }
+    .login-submit:hover {
+      background-position: right;
+    }
 
-      .bt-cancelar {
-        font-family: sans-serif;
-        font-size: 10pt;
-        color: #929292;
-        padding: 5px;
-        text-decoration: none;
-        margin-top: 10%;
-      }
+    .login-reset {
+      font-size: 13px;
+      color: #929292;
+      text-decoration: none;
+    }
 
-      .bt-cadastro {
-        font-family: sans-serif;
-        font-size: 14pt;
-        color: #929292;
-        padding: 5px;
-        text-decoration: none;
-        margin-top: 10%;
-      }
-      .pgBtVoltar {
-        position: absolute;
-        margin-left: 92%;
-        margin-top: 18%;
-        height: auto;
-        width: 30pt;
-      }
+    .bt-cancelar {
+      font-family: sans-serif;
+      font-size: 10pt;
+      color: #929292;
+      padding: 5px;
+      text-decoration: none;
+      margin-top: 10%;
+    }
 
-      .btVoltar {
-        background: #0066a2;
-        color: white;
-        border-style: outset;
-        border-color: #0066a2;
-        font: bold 20px arial, sans-serif;
-        text-shadow: none;
-        text-decoration: none;
-      }
-      .Quadro-geral {
-        padding-top: 60px;
-        display: grid;
-        justify-content: center;
-        align-items: center;
-      }
-      .login-title {
-        text-align: center;
-        color: white;
-        background-color: #666;
-        margin-top: 30px;
-      }
-    </style>
-  </head>
+    .bt-cadastro {
+      font-family: sans-serif;
+      font-size: 14pt;
+      color: #929292;
+      padding: 5px;
+      text-decoration: none;
+      margin-top: 10%;
+    }
 
-  <body>
-    <div id="dv-modal" class="modal">
-      <div class="modal-content">
-        <main class="login">
-          <div class="login-container">
-            <h1 class="login-title">Cadastro de Fornecedores</h1>
-            <form
-              class="Quadro-geral"
-              method="POST"
-              enctype="multipart/form-data"
-            >
-              Empresa
-              <input type="text" name="txtNomeEmpresa" class="txtInput" />
-              <br />
-              CNPJ
-              <input
-                type="text"
-                name="txtCNPJ"
-                placeholder="00.000.000/0000-00"
-                class="txtInput"
-              />
-              <br />
-              E-mail
-              <input type="text" name="txtEnd" class="txtInput" /> <br />
-              <br />
-              <input
-                type="submit"
-                name="Adicionar"
-                value="Cadastrar"
-                class="btn btn-primary"
-              />
-              <br /><br />
-            </form>
-          </div>
-          <p class="pgBtVoltar">
-            <a class="btVoltar" href="/">Voltar</a>
-          </p>
-        </main>
-      </div>
+    .pgBtVoltar {
+      position: absolute;
+      margin-left: 92%;
+      margin-top: 16%;
+      height: auto;
+      width: 30pt;
+    }
+
+    .btVoltar {
+      background: #0066a2;
+      color: white;
+      border-style: outset;
+      border-color: #0066a2;
+      font: bold 20px arial, sans-serif;
+      text-shadow: none;
+      text-decoration: none;
+    }
+
+    .Quadro-geral {
+      padding-top: 60px;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bt-cadastro {
+      font-family: sans-serif;
+      font-size: 14pt;
+      color: white;
+      background-color: #666;
+      padding: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      margin-left: 40px;
+    }
+
+    .login-title {
+      text-align: center;
+      color: white;
+      background-color: #666;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="dv-modal" class="modal">
+    <div class="modal-content">
+      <main class="login">
+        <div class="login-container">
+          <h1 class="login-title">Cadastro de Fornecedores</h1>
+          <form class="Quadro-geral" method="POST" enctype="multipart/form-data">
+            Empresa
+            <input type="text" name="txtNomeEmpresa" class="txtInput" />
+            <br />
+            CNPJ
+            <input type="text" name="txtCNPJ" placeholder="00.000.000/0000-00" class="txtInput" />
+            <br />
+            E-mail
+            <input type="text" name="txtEnd" class="txtInput" /> <br />
+            <br />
+            <!-- <input type="submit" name="Adicionar" value="Cadastrar" class="btn btn-primary" /> -->
+            <p><a href="/" class="bt-cadastro">Cadastrar</a></p>
+            <br /><br />
+          </form>
+        </div>
+        <p class="pgBtVoltar">
+          <a class="btVoltar" href="/">Voltar</a>
+        </p>
+      </main>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

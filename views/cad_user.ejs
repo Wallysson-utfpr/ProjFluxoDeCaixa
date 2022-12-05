@@ -1,201 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- folha de estilos -->
-    <style>
-      body {
-        background-color: #e9e4e4;
-        background-image: url("../imagens/background-login.jpg");
-        background-size: 1550px 810px;
-        font-family: "Inter", sans-serif;
-      }
 
-      .login {
-        padding: 15px;
-        height: 70vh;
-        background: transparent;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
+  <!-- folha de estilos -->
+  <style>
+    body {
+      background-color: #e9e4e4;
+      background-image: url("../imagens/background-login.jpg");
+      background-size: 1550px 810px;
+      font-family: "Inter", sans-serif;
+    }
 
-      .login-container {
-        max-height: 510px;
-        width: 300px;
-        box-sizing: border-box;
-        padding: 32px;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+    .login {
+      padding: 15px;
+      height: 70vh;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-      .login-form {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      .login-input {
-        height: 40px;
-        width: 100%;
-        box-sizing: border-box;
-        padding-left: 8px;
-        border: unset;
-        outline: none;
-      }
+    .login-container {
+      max-height: 510px;
+      width: 300px;
+      box-sizing: border-box;
+      padding: 32px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-      .login-input-border {
-        height: 1px;
-        width: 100%;
-        margin-bottom: 16px;
-        background-color: #cfcfcf;
-        transition: 0.3s, ease-in-out;
-      }
+    .login-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
-      .login-input-border::after {
-        content: "";
-        display: block;
-        height: 1px;
-        width: 0;
-        margin-bottom: 16px;
-        background: linear-gradient(120deg, #0e0e0e, #ff1010);
-        transition: 0.3s, ease-in-out;
-      }
+    .login-input {
+      height: 40px;
+      width: 100%;
+      box-sizing: border-box;
+      padding-left: 8px;
+      border: unset;
+      outline: none;
+    }
 
-      .login-input:focus + .login-input-border::after {
-        width: 100%;
-      }
+    .login-input-border {
+      height: 1px;
+      width: 100%;
+      margin-bottom: 16px;
+      background-color: #cfcfcf;
+      transition: 0.3s, ease-in-out;
+    }
 
-      .login-submit {
-        height: 48px;
-        width: 100%;
-        padding-left: 8px;
-        outline: none;
-        position: relative;
-        color: #fff;
-        background-color: black;
-        background-size: 200%;
-        margin-bottom: 32px;
-        font-size: 16px;
-        font-weight: bold;
-        border: unset;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: 0.5s, ease;
-      }
+    .login-input-border::after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 0;
+      margin-bottom: 16px;
+      background: linear-gradient(120deg, #0e0e0e, #ff1010);
+      transition: 0.3s, ease-in-out;
+    }
 
-      .login-submit:hover {
-        background-position: right;
-      }
+    .login-input:focus+.login-input-border::after {
+      width: 100%;
+    }
 
-      .login-reset {
-        font-size: 13px;
-        color: #929292;
-        text-decoration: none;
-      }
+    .login-submit {
+      height: 48px;
+      width: 100%;
+      padding-left: 8px;
+      outline: none;
+      position: relative;
+      color: #fff;
+      background-color: black;
+      background-size: 200%;
+      margin-bottom: 32px;
+      font-size: 16px;
+      font-weight: bold;
+      border: unset;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.5s, ease;
+    }
 
-      .bt-cancelar {
-        font-size: 10pt;
-        color: #929292;
-        padding: 5px;
-        text-decoration: none;
-        margin-top: 10%;
-      }
+    .login-submit:hover {
+      background-position: right;
+    }
 
-      .bt-cadastro {
-        font-size: 10pt;
-        color: #ffffff;
-        background-color: #0e0e0e;
-        padding: 5px;
-        text-decoration: none;
-        margin-top: 10%;
-      }
-    </style>
-  </head>
+    .login-reset {
+      font-size: 13px;
+      color: #929292;
+      text-decoration: none;
+    }
 
-  <body>
-    <div id="dv-modal" class="modal">
-      <div class="modal-content">
-        <main class="login">
-          <div class="login-container">
-            <h1 class="login-title">Cadastro</h1>
-            <form method="POST" action="/cadastrar" class="login-form">
-              <!-- incluído e-mail obrigatório para evitar erro do servidor de campo vazio -->
-              <input
-                class="login-input"
-                type="email"
-                required
-                name="iptEmail"
-                placeholder="Email"
-              />
-              <span class="login-input-border"></span>
-              <ul2></ul2>
+    .bt-cancelar {
+      font-size: 10pt;
+      color: #929292;
+      padding: 5px;
+      text-decoration: none;
+      margin-top: 10%;
+    }
 
-              <!-- incluído senha obrigatória para evitar erro do servidor de senha vazia -->
-              <input
-                class="login-input"
-                type="password"
-                required
-                name="iptSenha"
-                placeholder="Senha"
-              />
-              <span class="login-input-border"></span>
-              <ul1></ul1>
-              <p></p>
+    .bt-cadastro {
+      font-size: 10pt;
+      color: #ffffff;
+      background-color: #0e0e0e;
+      padding: 5px;
+      text-decoration: none;
+      margin-top: 10%;
+    }
+  </style>
+</head>
 
-              <input
-                type="submit"
-                name="Cadastro"
-                value="Cadastrar"
-                class="btn-cadastro"
-              />
+<body>
+  <div id="dv-modal" class="modal">
+    <div class="modal-content">
+      <main class="login">
+        <div class="login-container">
+          <h1 class="login-title">Cadastro</h1>
+          <form method="POST" action="/cadastrar" class="login-form">
+            <!-- incluído e-mail obrigatório para evitar erro do servidor de campo vazio -->
+            <input class="login-input" type="email" required name="iptEmail" placeholder="Email" />
+            <span class="login-input-border"></span>
+            <ul2></ul2>
 
-              <p>
-                <a href="/">Voltar</a>
-              </p>
+            <!-- incluído senha obrigatória para evitar erro do servidor de senha vazia -->
+            <input class="login-input" type="password" required name="iptSenha" placeholder="Senha" />
+            <span class="login-input-border"></span>
+            <ul1></ul1>
+            <p></p>
 
-              <!-- scrip para orientar tamanho mínimo da senha -->
-              <script>
-                const inputPassword = document.querySelector(
-                  'input[type = "password"]'
-                );
-                const submitButton = document.querySelector(".btn-cadastro");
+            <input type="submit" name="Cadastro" value="Cadastrar" class="btn-cadastro" />
 
-                document.querySelector(".btn-cadastro").disabled = true;
+            <p>
+              <a href="/">Voltar</a>
+            </p>
 
-                inputPassword.addEventListener("keyup", function () {
-                  var avisoSenha = document.querySelector("ul1"),
-                    palavra = inputPassword.value;
-                  avisoSenha.innerHTML = "";
-                  if (palavra.length < 4) {
-                    var li = document.createElement("li");
-                    li.innerHTML =
-                      "Senha precisa ser maior do que três caracteres!";
-                    avisoSenha.appendChild(li).style.color = "red";
-                  } else {
-                    var li = document.createElement("li");
-                    li.innerHTML = "Senha OK";
-                    avisoSenha.appendChild(li).style.color = "green";
-                    document.querySelector(".btn-cadastro").disabled = false;
-                  }
-                });
-              </script>
-            </form>
-          </div>
-        </main>
-      </div>
+            <!-- scrip para orientar tamanho mínimo da senha -->
+            <script>
+              const inputPassword = document.querySelector(
+                'input[type = "password"]'
+              );
+              const submitButton = document.querySelector(".btn-cadastro");
+
+              document.querySelector(".btn-cadastro").disabled = true;
+
+              inputPassword.addEventListener("keyup", function () {
+                var avisoSenha = document.querySelector("ul1"),
+                  palavra = inputPassword.value;
+                avisoSenha.innerHTML = "";
+                if (palavra.length < 4) {
+                  var li = document.createElement("li");
+                  li.innerHTML =
+                    "Senha precisa ser maior do que três caracteres!";
+                  avisoSenha.appendChild(li).style.color = "red";
+                } else {
+                  var li = document.createElement("li");
+                  li.innerHTML = "Senha OK";
+                  avisoSenha.appendChild(li).style.color = "green";
+                  document.querySelector(".btn-cadastro").disabled = false;
+                }
+              });
+            </script>
+          </form>
+        </div>
+      </main>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
