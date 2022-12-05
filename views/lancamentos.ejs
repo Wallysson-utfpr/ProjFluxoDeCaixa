@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
   <title>Lançamentos</title>
-  
+
 
   <style>
     @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
@@ -146,21 +146,22 @@
       color: #c0392b;
     }
 
-    .columnAction>button {  
+    .columnAction>button {
       margin-left: 100px;
       background: transparent;
       border: none;
     }
 
-    .columnAction> {  
-     display: none;
+    .columnAction> {
+      display: none;
     }
+
     .columnDesc {
       width: 200px;
     }
 
     .columnAmount {
-    width: 150px;
+      width: 150px;
     }
 
     .tdAmount {
@@ -195,7 +196,7 @@
       height: auto;
       width: 30pt;
     }
-    
+
 
     .btVoltar {
       position: absolute;
@@ -237,11 +238,11 @@
 
     <div class="newItem">
 
-       <div class="divDesc">
+      <div class="divDesc">
         <label for="nome">Fornecedor</label>
         <select id="nome">
-          <option>Caixa</option>
-          <option>Itau</option>
+          <option>Mercado Livre</option>
+          <option>Supermercado do Vale</option>
         </select>
       </div>
 
@@ -353,9 +354,9 @@
       let tr = document.createElement("tr");
 
       tr.innerHTML = `
-          <td class="columnTypee3">${item.nome === "Caixa"
-          ? '<i><td class="tdType3">Caixa</td></i>'
-          : '<i><td class="tdType3">Itau</td></i>'
+          <td class="columnTypee3">${item.nome === "Mercado Livre"
+          ? '<i><td class="tdType3">Mercado Livre</td></i>'
+          : '<i><td class="tdType3">Supermercado do vale</td></i>'
         }</td>
           
             <td class="tdDesc">${item.desc}</td>

@@ -1,108 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro</title>
-    <script src="dados.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        background-color: #ede8f1;
-        font-family: "Inter", sans-serif;
-      }
 
-      .bt-cadastro {
-        font-family: sans-serif;
-        font-size: 14pt;
-        color: white;
-        background-color: #666;
-        padding: 5px;
-        text-decoration: none;
-        margin-top: 2%;
-        cursor: pointer;
-        -webkit-transition: box-shadow 300ms ease-in-out,
-          color 300ms ease-in-out;
-        transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-      }
-      .topBar {
-        background-color: #666;
-        margin: 0 auto;
-      }
-      .title {
-        font-size: 24pt;
-        color: white;
-        text-align: center;
-        margin-top: 30px;
-      }
-      .formulario {
-        font-size: 14pt;
-        color: black;
-        text-align: center;
-        padding-top: 60px;
-      }
-      .pgBtVoltar {
-        position: absolute;
-        margin-left: 90%;
-        margin-top: 20%;
-        height: auto;
-        width: 30pt;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro</title>
+  <script src="dados.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #ede8f1;
+      font-family: "Inter", sans-serif;
+    }
 
-      .btVoltar {
-        background: #0066a2;
-        color: white;
-        border-style: outset;
-        border-color: #0066a2;
-        font: bold 20px arial, sans-serif;
-        text-shadow: none;
-        text-decoration: none;
-      }
-    </style>
-  </head>
+    .bt-cadastro {
+      font-family: sans-serif;
+      font-size: 14pt;
+      color: white;
+      background-color: #666;
+      padding: 5px;
+      text-decoration: none;
+      margin-top: 2%;
+      cursor: pointer;
+      -webkit-transition: box-shadow 300ms ease-in-out,
+        color 300ms ease-in-out;
+      transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    }
 
-  <body>
-    <div class="topBar">
-      <h1 class="title">Cadastro de Contas</h1>
-    </div>
-    <main class="formulario">
-      <form action="">
-        <h4>Nome da Conta</h4>
-        <input type="text" id="nomeConta" class="txtCor" />
-        <br />
-        <h4 class="saldo">Saldo Inicial</h4>
-        <input
-          type="text"
-          name="txtSaldo"
-          placeholder="R$0,00"
-          class="txtCor"
-        />
-        <br />
-        <input
-          type="submit"
-          id="adicionarConta"
-          value="Salvar"
-          class="bt-cadastro"
-        />
-      </form>
-      <p class="pgBtVoltar">
-        <a class="btVoltar" href="/">Voltar</a>
-      </p>
-    </main>
-    <!-- <script>
-      const add_conta = document.querySelector("#adicionarConta");
+    .topBar {
+      background-color: #666;
+      margin: 0 auto;
+    }
 
-      add_conta.addEventListener("click", function (e) {
-        e.preventDefault();
-        const nome_conta = document.querySelector("#nomeConta").value;
-        console.log(nome_conta);
-      });
-    </script> -->
-  </body>
+    .title {
+      font-size: 24pt;
+      color: white;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .formulario {
+      font-size: 14pt;
+      color: black;
+      text-align: center;
+      padding-top: 60px;
+    }
+
+    .pgBtVoltar {
+      position: absolute;
+      margin-left: 90%;
+      margin-top: 18%;
+      height: auto;
+      width: 30pt;
+    }
+
+    .btVoltar {
+      background: #0066a2;
+      color: white;
+      border-style: outset;
+      border-color: #0066a2;
+      font: bold 20px arial, sans-serif;
+      text-shadow: none;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topBar">
+    <h1 class="title">Cadastro de Contas</h1>
+  </div>
+  <main class="formulario">
+    <form action="">
+      <h4>Nome da Conta</h4>
+      <input type="text" id="nomeConta" class="txtCor" />
+      <br />
+      <h4 class="saldo">Saldo Inicial</h4>
+      <input type="text" name="txtSaldo" placeholder="R$0,00" class="txtCor" />
+      <br />
+      <input type="submit" id="adicionarConta" value="Salvar" class="bt-cadastro" />
+    </form>
+    <p class="pgBtVoltar">
+      <a class="btVoltar" href="/">Voltar</a>
+    </p>
+  </main>
+</body>
+
 </html>
